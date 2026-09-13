@@ -926,6 +926,7 @@
 				interrupts = <0x00 0x30 0x04>;
 				clocks = <0x01 0x89 0x01 0x88 0x01 0x87>;
 				clock-names = "ipg", "aclk", "mem";
+				status = "disabled";
 
 				jr@1000 {
 					compatible = "fsl,sec-v4.0-job-ring";
@@ -957,7 +958,8 @@
 				ahb-burst-config = <0x00>;
 				tx-burst-size-dword = <0x10>;
 				rx-burst-size-dword = <0x10>;
-				status = "okay";
+                #status = "okay";
+				status = "disabled";
 				dr_mode = "otg";
 				pinctrl-names = "default";
 				pinctrl-0 = <0x22>;
@@ -973,7 +975,8 @@
 				ahb-burst-config = <0x00>;
 				tx-burst-size-dword = <0x10>;
 				rx-burst-size-dword = <0x10>;
-				status = "okay";
+                #status = "okay";
+				status = "disabled";
 				dr_mode = "host";
 				disable-over-current;
 			};
@@ -983,6 +986,7 @@
 				compatible = "fsl,imx6ul-usbmisc", "fsl,imx6q-usbmisc";
 				reg = <0x2184800 0x200>;
 				phandle = <0x21>;
+				status = "disabled";
 			};
 
 			ethernet@2188000 {
@@ -1156,6 +1160,7 @@
 				compatible = "fsl,imx6ul-ocotp", "syscon";
 				reg = <0x21bc000 0x4000>;
 				clocks = <0x01 0xa5>;
+				status = "disabled";
 
 				calib@38 {
 					reg = <0x38 0x04>;
@@ -1199,7 +1204,8 @@
 				interrupts = <0x00 0x05 0x04>;
 				clocks = <0x01 0xa2 0x01 0xa1 0x01 0x00>;
 				clock-names = "pix", "axi", "disp_axi";
-				status = "okay";
+                #status = "okay";
+				status = "disabled";
 				assigned-clocks = <0x01 0x49>;
 				assigned-clock-parents = <0x01 0x34>;
 				pinctrl-names = "default";
@@ -1231,7 +1237,8 @@
 				interrupts = <0x00 0x6b 0x04>;
 				clocks = <0x01 0xb0 0x01 0xb0>;
 				clock-names = "qspi_en", "qspi";
-				status = "okay";
+                #status = "okay";
+				status = "disabled";
 				pinctrl-names = "default";
 				pinctrl-0 = <0x35>;
 
@@ -1410,6 +1417,7 @@
 	panel {
 		compatible = "innolux,at043tn24";
 		backlight = <0x3e>;
+        status = "disabled";
 
 		port {
 
