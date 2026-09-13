@@ -1427,4 +1427,14 @@
 			};
 		};
 	};
+
+    leds {
+        compatible = "gpio-leds";
+
+        qemu_status {
+            label = "qemu-status";
+            gpios = <0x0c 4 0>;
+            default-state = "off";
+        };
+    };
 };

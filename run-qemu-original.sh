@@ -1,3 +1,8 @@
+if [ "$(stat -c%s rootfs.ext2)" -lt $((64 * 1024 * 1024)) ]; then
+    truncate -s 64M rootfs.ext2
+fi
+
+
 qemu-system-arm \
         -M mcimx6ul-evk \
         -m 512M \
